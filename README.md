@@ -16,7 +16,7 @@ board, and upload.
 |---|---|
 | `ClockV1` | A six-digit clock on an Arduino UNO that multiplexes a common-cathode seven-segment display directly from the pins. Its header notes that it loses less than one second every four days |
 | `ClockV2`, `clockDemo`, `FHEDemo` | A nine-character clock and alarm (`HH.MM.SSA`) built on a `SevenSegmentDriver` display library, with a millisecond tick, a 12-hour time format, and an alarm flag. `FHEDemo` adds a timer |
-| `EmryVDay` | A clock variant with a ticking buzzer and a song played at a set tempo, made as a gift |
+| `EmryVDay` | A themed display sketch built on the same driver, with a ticking buzzer and a song played at a set tempo |
 | `TimeBomb` | A large standalone sketch (about 1,500 lines) that drives a nine-digit display pin by pin, with a 12-hour clock, an alarm clock, scrolling text, and a ticking sound effect |
 | `StringReceiveAndDisplay` | Scrolls text received over the serial port across the display |
 | `ColorDisplay` | Receives color values over the serial port and shows them on the display |
@@ -52,7 +52,7 @@ board, and upload.
 
 | Sketch | What it does |
 |---|---|
-| `ArensProject` | Detects a tone in a sampled signal. It samples the analog input at 3 kHz, mixes it down at the target frequency, filters it with a windowed-sinc low-pass FIR filter, decimates, and compares the level to a dB threshold. Parameters such as the target frequency, bandwidth, and filter length are set at the top of the file |
+| `ArensProject` | Detects a tone in a sampled signal. It samples the analog input at 3 kHz, mixes it down at the target frequency, filters it with a sinc low-pass FIR filter, decimates, and compares the level to a dB threshold. Parameters such as the target frequency, bandwidth, and filter length are set at the top of the file |
 | `ESP32_Sampler` | The same approach retuned for an ESP32, with a 1 kHz sample rate and a 300 Hz target |
 
 ### Communication protocols (`UARTProjects/`, `dacSPI/`)
